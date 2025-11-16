@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles/dashboard.css";
 import {
   Container,
   Row,
@@ -363,6 +364,7 @@ const Dashboard = () => {
                 </Alert>
               ) : (
                 <div className="table-responsive">
+                  <Table striped bordered hover className="tabla-turnos"></Table>
                   <Table striped bordered hover>
                     <thead>
                       <tr>
@@ -394,8 +396,8 @@ const Dashboard = () => {
                           <td>{turno.hora}</td>
                           <td>{turno.especialidad}</td>
                           <td>{getStatusBadge(turno.status)}</td>
-                          <td>
-                            <div className="d-flex gap-1">
+                            <td className="acciones-col">
+                            <div className="acciones-wrapper">
                               {turno.status === "Pendiente" && (
                                 <Button
                                   variant="success"

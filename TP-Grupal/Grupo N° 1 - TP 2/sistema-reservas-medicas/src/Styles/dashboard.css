@@ -1,0 +1,65 @@
+/* --- RESPONSIVE PARA TABLA DE TURNOS --- */
+
+.tabla-turnos td,
+.tabla-turnos th {
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+/* Columna de acciones */
+.acciones-col {
+  width: 140px;
+}
+
+/* Wrapper de botones */
+.acciones-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+}
+
+/* Botones más compactos */
+.btn-accion {
+  padding: 2px 6px !important;
+  font-size: 0.75rem !important;
+  line-height: 1 !important;
+}
+
+/* ---- RESPONSIVE: Móvil ---- */
+@media (max-width: 768px) {
+  .tabla-turnos td,
+  .tabla-turnos th {
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .acciones-col {
+    width: 100px;
+  }
+
+  .btn-accion {
+    padding: 2px 4px !important;
+    font-size: 0.65rem !important;
+  }
+
+  .acciones-wrapper {
+    gap: 2px;
+  }
+}
+
+/* ---- Pantallas muy chicas (480px) ---- */
+@media (max-width: 480px) {
+  .acciones-col {
+    width: 80px;
+  }
+
+  .btn-accion {
+    padding: 1px 3px !important;
+    font-size: 0.6rem !important;
+  }
+
+  .tabla-turnos td {
+    font-size: 0.7rem;
+  }
+}
